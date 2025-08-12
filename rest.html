@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+ <h1 style="text-decoration-line:overline;text-align: center;">Duncain sharp planner</h1>
+ <div class="mainholder">
+    <div class="specialdata">
+      <h2>module details</h2>
+      <ul class="module-section">
+        <li>Biomechanics</li>
+        <li>biosignal processing</li>
+        <li>radiophysics</li>
+        <li>engineering thermodynamics</li>
+        <li>medical imaging</li>
+        <li>occupation health and safety</li>
+      </ul>
+    </div>
+      
+    <div class="specialdata">
+      <h2>Loading  tasks</h2>
+      <ul>
+        <li>presentaion occupation health and safety</li>
+        <li>presentation biosignal processing</li>
+        <li>examination biosignal</li>
+        <li>examination radiophysics </li>
+        <li>examinmationengineerin thermodynamics </li>
+        <li>examination occupation health and safety</li>
+
+      </ul>
+    </div>
+      
+  </div>
+  <div class="timetable">
+    <h2>class time table</h2>
+
+      <div class="timebox">
+        <div class="days">
+          <div class="dayname">TIME</div>
+          <div class="lesson">7:30-9:30</div>
+          <div class="lesson">9:30-11:20</div>
+          <div class="lesson">11:30-1:20</div>
+          <div class="lesson">1:30-3:20</div>
+          <div class="lesson">3:30-5:20</div>
+
+
+        </div>
+        <div class="days">
+          <div class="dayname">MONDAY</div>
+          <div class="lesson">medical imaging</div>
+          <div class="lesson">radiophysics </div>
+          <div class="lesson">free slot </div>
+          <div class="lesson">free slot </div>
+          <div class="lesson">biosignal processing</div>
+        </div>
+          <div class="days">
+          <div class="dayname">TUESDAY</div>
+          <div class="lesson">Thermodynamics</div>
+          <div class="lesson">Occupation health</div>
+          <div class="lesson">free slot</div>
+          <div class="lesson">free slot</div>
+          <div class="lesson">free slot</div>
+
+        </div>
+          <div class="days">
+          <div class="dayname">WEDNESDAY</div>
+          <div class="lesson">medical imaging</div>
+          <div class="lesson">biosignal processing </div>
+          <div class="lesson">thermodynamics </div>
+          <div class="lesson">free slot</div>
+          <div class="lesson">free slot</div>
+
+
+        </div>
+          <div class="days">
+          <div class="dayname">THURSDAY</div>
+          <div class="lesson">free slot</div>
+          <div class="lesson">occupation health </div>
+          <div class="lesson">biomechanics </div>
+          <div class="lesson">free slot </div>
+          <div class="lesson">radiophysics </div>
+        </div>
+        <div class="days">
+          <div class="dayname">FRIDAY</div>
+          <div class="lesson">biomechanics</div>
+          <div class="lesson">free slot</div>
+          <div class="lesson">free slot </div>
+          <div class="lesson">free slot </div>
+          <div class="lesson">free slot </div>
+        </div>
+       
+
+
+
+      </div>
+  </div>
+
+  
+
+</body>
+<style>
+  :root
+  {
+    --length:500px;
+
+  }
+  /*========================days =========================**/
+  .specialdata
+  {
+    background-color: rgb(240, 240, 252);
+    border-radius: 20px;
+    width:var(--length);
+    box-shadow:2px 2px 0px 0px;margin: 5px;
+  }
+  /***mainhoder================================================*/
+.mainholder{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+/*time box*=============================*/
+.timetable
+{
+  box-shadow: 5px 5px 10px 1px ;
+}
+.timebox
+{
+display:grid;
+grid-template-rows: 40px 40px 40px 40px 40px 40px 40px;
+
+}
+/*DAYS*==================================================*/
+.days
+{
+  display: grid;
+  grid-template-columns: 100px 100px 100px 100px 100px 100px ;
+  text-align: center;
+}
+.lesson
+{
+  background-color: rgb(209, 205, 205);
+  margin: 2px;
+  border-radius: 5px;
+  ::hover{
+    background-color: red;
+  }
+
+
+  
+}
+
+h2{
+  text-decoration: underline;
+
+}
+body{
+  background-color: rgb(250, 238, 238);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+</style>
+
+</html
