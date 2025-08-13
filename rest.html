@@ -20,8 +20,8 @@
       </ul>
     </div>
       
-    <div class="specialdata">
-      <h2>Loading  tasks</h2>
+    <div class="specialdata" id="specialdata-yourwork">
+      <h2 id="mytasks">your work this week</h2>
       <ul>
         <li>presentaion occupation health and safety</li>
         <li>presentation biosignal processing</li>
@@ -264,6 +264,7 @@ grid-template-rows: 40px 40px 40px 40px 40px 40px 40px;
   display: grid;
   grid-template-columns: 100px 100px 100px 100px 100px 100px ;
   text-align: center;
+  background-color: white;
 }
 .lesson
 {
@@ -284,6 +285,11 @@ body{
   flex-direction: column;
   align-items: center;
   background-image: url(my\ image.jpg);
+  
+}
+h1{
+  background-color: white;
+  border-radius: 10px;;
 }
 .smallscreen
 {
@@ -357,6 +363,56 @@ h2{
 .specialdatasmallcreen{
   text-align: center;
   display: none;
+}
+#mytasks
+{
+ animation: flicker 10s linear infinite;
+ text-align: center;
+ border-radius: 25px;
+}
+#specialdata-yourwork
+{  position: relative;
+  animation: slide 5s;
+}
+
+
+@keyframes flicker
+{
+  0%{
+    background-color: rgb(233, 7, 7);
+  }
+  50%
+  {
+    background-color: rgb(134, 199, 134);
+  }
+  60%
+  {
+    background: rgb(108, 124, 218);
+  }
+  100%
+  {
+    background-color: rgb(231, 231, 170);
+  }
+}
+@keyframes slide
+{
+  0%
+  {
+left : 0px;
+  }
+  25%
+  {
+right :10px;
+
+}
+75%
+{
+  right:0px;
+}
+100%
+{
+  right:10px;
+}
 }
 
 </style>
