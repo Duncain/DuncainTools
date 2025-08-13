@@ -97,9 +97,19 @@
 
       </div>
   </div>
-<div class="smallscreen"><h2>view time table</h2></div>
+<div class="smallscreen"><h2>TIME TABLE</h2>
+<div class="specialaccess" id="specialaccess">
+  <button id="monbtn">Monday</button>
+  <button id="tuebtn">Tuesday</button>
+  <button id="wedbtn">wednesday</button>
+  <button id="thubtn">thurday</button>
+  <button id="fribtn">friday</button>
+
+</div></div>
+<div id="daycontainer" ></div>
+
 <!--small screen solutiions down -->
-<div class="specialdatasmallcreen">
+<div class="specialdatasmallcreen" id="mon">
   <h2>Monday lessons</h2>
   <div class="lsn">
     <div class="moddetail">Medical imaging</div>
@@ -123,7 +133,7 @@
     
   </div>
 </div> 
-<div class="specialdatasmallcreen">
+<div class="specialdatasmallcreen" id="tue">
   <h2>Tuesday</h2>
   <div class="lsn">
     <div class="moddetail">Thermodynamics</div>
@@ -143,7 +153,7 @@
     
   </div>
 </div>  
-<div class="specialdatasmallcreen">
+<div class="specialdatasmallcreen" id="wed">
   <h2>Wednesday</h2>
   <div class="lsn">
     <div class="moddetail">Medical imaging</div>
@@ -167,7 +177,7 @@
     
   </div>
 </div>  
-<div class="specialdatasmallcreen">
+<div class="specialdatasmallcreen" id="thu">
   <h2>Thursday</h2>
   <div class="lsn">
     <div class="moddetail">Occupation health and safety</div>
@@ -191,26 +201,16 @@
     
   </div>
 </div>  
-<div class="specialdatasmallcreen">
-  <h2>Monday lessons</h2>
+<div class="specialdatasmallcreen" id="fri">
+  <h2>Friday</h2>
   <div class="lsn">
-    <div class="moddetail">Medical imaging</div>
-    <div class="moddetail">302</div>
-    <div class="moddetail">j.nkhula</div>
+    <div class="moddetail">biomechanic </div>
+    <div class="moddetail">tel lab</div>
+    <div class="moddetail">8:00-9:20</div>
 
     
-  </div>
-    <div class="lsn">
-    <div class="moddetail">Medical imaging</div>
-    <div class="moddetail">302</div>
-    <div class="moddetail">j.nkhula</div>
+</div>
 
-    
-  </div>
-    <div class="lsn">
-    <div class="moddetail">Medical imaging</div>
-    <div class="moddetail">302</div>
-    <div class="moddetail">j.nkhula</div>
 
     
   </div>
@@ -227,7 +227,11 @@
     --speciacolor2:rgb(243, 236, 236);
     
   }
-  
+
+#daycontainer
+{ 
+  display: none;
+}
   /*========================days =========================**/
   .specialdata,.specialdatasmallcreen
   {
@@ -266,10 +270,6 @@ grid-template-rows: 40px 40px 40px 40px 40px 40px 40px;
   background-color: rgb(209, 205, 205);
   margin: 2px;
   border-radius: 5px;
-  ::hover{
-    background-color: red;
-  }
-
 
   
 }
@@ -315,13 +315,32 @@ body{
   border-radius: 10px;
   justify-content: center;
   margin: 5px;
+  flex-direction: column;
 
 }
 
 h2{
   text-decoration: none;
 }
+#daycontainer
+{ 
+  display: flex;
+  flex-direction: column;
+}
 
+
+
+
+}
+.specialaccess 
+{
+  /*display: none;*/
+  text-align: center;
+  
+}
+.specialaccess button{
+  border-radius: 50px;
+  height: 30px
 }
 .lsn{
   display: grid;
@@ -336,7 +355,89 @@ h2{
 }
 .specialdatasmallcreen{
   text-align: center;
+  display: none;
 }
-</style>
 
+</style>
+<script>
+  const monbtn=document.getElementById("monbtn");
+  const tuebtn=document.getElementById("tuebtn");
+  const wedbtn=document.getElementById("wedbtn");
+  const thubtn=document.getElementById("thubtn");
+  const fribtn=document.getElementById("fribtn");
+
+const monlsn= document.getElementById("mon");
+const tuelsn= document.getElementById("tue");
+const wedlsn= document.getElementById("wed");
+const thulsn= document.getElementById("thu");
+const frilsn= document.getElementById("fri");
+const specialaccess= document.getElementById("specialaccess");
+const daycontainer= document.getElementById("daycontainer");
+
+
+
+ monbtn.onclick= function(){
+daycontainer.innerHTML = monlsn.innerHTML;
+updatebtncolor(1);
+}
+ tuebtn.onclick= function(){
+daycontainer.innerHTML = tuelsn.innerHTML;
+updatebtncolor(2);
+} 
+wedbtn.onclick= function(){
+daycontainer.innerHTML = wedlsn.innerHTML;
+updatebtncolor(3);
+}
+ thubtn.onclick= function(){
+daycontainer.innerHTML = thulsn.innerHTML;
+updatebtncolor(4);
+}
+ fribtn.onclick= function(){
+daycontainer.innerHTML = frilsn.innerHTML;
+updatebtncolor(5);
+}
+function updatebtncolor(n)
+{ 
+  switch(n)
+  {
+   case 1:
+   monbtn.style.backgroundColor="rgb(43, 240, 240)";
+   tuebtn.style.backgroundColor="rgb(240, 240, 252)";
+   wedbtn.style.backgroundColor="rgb(240, 240, 252)";
+   thubtn.style.backgroundColor="rgb(240, 240, 252)";
+   fribtn.style.backgroundColor="rgb(240, 240, 252)";
+   break;
+   case 2:
+   monbtn.style.backgroundColor="rgb(240, 240, 252)";
+   tuebtn.style.backgroundColor="rgb(43, 240, 240)";
+   wedbtn.style.backgroundColor="rgb(240, 240, 252)";
+   thubtn.style.backgroundColor="rgb(240, 240, 252)";
+   fribtn.style.backgroundColor="rgb(240, 240, 252)";
+   break;
+   case 3:
+   monbtn.style.backgroundColor="rgb(240, 240, 252)";
+   tuebtn.style.backgroundColor="rgb(240, 240, 252)";
+   wedbtn.style.backgroundColor="rgb(43, 240, 240)";
+   thubtn.style.backgroundColor="rgb(240, 240, 252)";
+   fribtn.style.backgroundColor="rgb(240, 240, 252)";
+   break;
+   case 4:
+   monbtn.style.backgroundColor="rgb(240, 240, 252)";
+   tuebtn.style.backgroundColor="rgb(240, 240, 252)";
+   wedbtn.style.backgroundColor="rgb(240, 240, 252)";
+   thubtn.style.backgroundColor="rgb(43, 240, 240)";
+   fribtn.style.backgroundColor="rgb(240, 240, 252)";
+   break;
+   case 5:
+   monbtn.style.backgroundColor="rgb(240, 240, 252)";
+   tuebtn.style.backgroundColor="rgb(240, 240, 252)";
+   wedbtn.style.backgroundColor="rgb(240, 240, 252)";
+   thubtn.style.backgroundColor="rgb(240, 240, 252)";
+   fribtn.style.backgroundColor="rgb(43, 240, 240)";
+   break;
+  }
+
+}
+
+</script>
 </html
