@@ -97,18 +97,139 @@
 
       </div>
   </div>
+<div class="smallscreen"><h2>view time table</h2></div>
+<!--small screen solutiions down -->
+<div class="specialdatasmallcreen">
+  <h2>Monday lessons</h2>
+  <div class="lsn">
+    <div class="moddetail">Medical imaging</div>
+    <div class="moddetail">302</div>
+    <div class="moddetail">j.nkhula</div>
 
-  
+    
+  </div>
+    <div class="lsn">
+    <div class="moddetail">Medical imaging</div>
+    <div class="moddetail">302</div>
+    <div class="moddetail">j.nkhula</div>
+
+    
+  </div>
+    <div class="lsn">
+    <div class="moddetail">Medical imaging</div>
+    <div class="moddetail">302</div>
+    <div class="moddetail">j.nkhula</div>
+
+    
+  </div>
+</div> 
+<div class="specialdatasmallcreen">
+  <h2>Tuesday</h2>
+  <div class="lsn">
+    <div class="moddetail">Thermodynamics</div>
+    <div class="moddetail">302</div>
+    <div class="moddetail">unknown</div>
+
+    
+  </div>
+    <div class="lsn">
+    <div class="moddetail">occupatipon health</div>
+    <div class="moddetail">55</div>
+    <div class="moddetail">Nyirongo</div>
+
+    
+  </div>
+    
+    
+  </div>
+</div>  
+<div class="specialdatasmallcreen">
+  <h2>Wednesday</h2>
+  <div class="lsn">
+    <div class="moddetail">Medical imaging</div>
+    <div class="moddetail">NT 13</div>
+    <div class="moddetail">Nkhundi</div>
+
+    
+  </div>
+    <div class="lsn">
+    <div class="moddetail">Biosignal processing</div>
+    <div class="moddetail">Nt 4</div>
+    <div class="moddetail">F. Masi</div>
+
+    
+  </div>
+    <div class="lsn">
+    <div class="moddetail">thermodynamics</div>
+    <div class="moddetail"> communicated </div>
+    <div class="moddetail">unknown</div>
+
+    
+  </div>
+</div>  
+<div class="specialdatasmallcreen">
+  <h2>Thursday</h2>
+  <div class="lsn">
+    <div class="moddetail">Occupation health and safety</div>
+    <div class="moddetail">wet 4</div>
+    <div class="moddetail">9:30-11:20</div>
+
+    
+  </div>
+    <div class="lsn">
+    <div class="moddetail">Biomechanics</div>
+    <div class="moddetail">45</div>
+    <div class="moddetail">11:30-1:20</div>
+
+    
+  </div>
+    <div class="lsn">
+    <div class="moddetail">Radiophysics</div>
+    <div class="moddetail">Nt 14</div>
+    <div class="moddetail">3:30-5:20</div>
+
+    
+  </div>
+</div>  
+<div class="specialdatasmallcreen">
+  <h2>Monday lessons</h2>
+  <div class="lsn">
+    <div class="moddetail">Medical imaging</div>
+    <div class="moddetail">302</div>
+    <div class="moddetail">j.nkhula</div>
+
+    
+  </div>
+    <div class="lsn">
+    <div class="moddetail">Medical imaging</div>
+    <div class="moddetail">302</div>
+    <div class="moddetail">j.nkhula</div>
+
+    
+  </div>
+    <div class="lsn">
+    <div class="moddetail">Medical imaging</div>
+    <div class="moddetail">302</div>
+    <div class="moddetail">j.nkhula</div>
+
+    
+  </div>
+</div>  
+ 
+<!--small screen solutions up -->
 
 </body>
 <style>
   :root
   {
     --length:500px;
-
+    --specialcolor1: rgb(240, 240, 252);
+    --speciacolor2:rgb(243, 236, 236);
+    
   }
+  
   /*========================days =========================**/
-  .specialdata
+  .specialdata,.specialdatasmallcreen
   {
     background-color: rgb(240, 240, 252);
     border-radius: 20px;
@@ -163,8 +284,59 @@ body{
   flex-direction: column;
   align-items: center;
 }
+.smallscreen
+{
+  display: none;
+}
 
+@media (max-width:873px)
+{
+.mainholder
+{
+  display:flex;
+  flex-direction:column;
+}
+.specialdata,.specialdatasmallcreen
+{
+  width: 300px;
+  
+}
+.timetable
+{
+  display: none;
+  
+}
+.smallscreen
+{ box-sizing: border-box;
+  display: flex;
+  background-color: rgb(240, 240, 252);
+  box-shadow: 2px 2px 0px 0px;
+  width: 300px;
+  border-radius: 10px;
+  justify-content: center;
+  margin: 5px;
 
+}
+
+h2{
+  text-decoration: none;
+}
+
+}
+.lsn{
+  display: grid;
+  grid-template-columns: 100px 60px 100px;
+  background-color:var(--speciacolor2);
+  border-radius: 10px;
+ 
+}
+.moddetail
+{
+ margin:5px
+}
+.specialdatasmallcreen{
+  text-align: center;
+}
 </style>
 
 </html
